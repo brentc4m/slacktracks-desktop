@@ -1,0 +1,19 @@
+{
+  "name": "slacktracks-desktop",
+  "version": "0.0.1",
+  "description": "Personalized streaming radio",
+  "scripts": {
+    "start": "electron dist/js/main.js",
+    "watch": "tsc -p . -w"
+  },
+  "repository": "https://github.com/brentc4m/slacktracks-desktop",
+  "author": "Brent Hill",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@types/electron": "^1.4.29",
+    "@types/node": "0.0.2",
+    "electron": "^1.4.1",
+    "typescript": "^2.1.4"
+  }
+}
