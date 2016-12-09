@@ -7,10 +7,10 @@ import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 
 @Component({
   selector: "my-app",
-  template: `<h1>Hello {{name}}</h1>`,
+  template: `<button id="play">Play/Pause</button>`,
 })
 class AppComponent {
-  private name = "Angular"
+
 }
 
 @NgModule({

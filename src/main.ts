@@ -6,7 +6,15 @@ import { BrowserWindow, app } from "electron"
 let mainWindow: Electron.BrowserWindow
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      plugins: true,
+      webSecurity: false
+    }
+  })
+
   mainWindow.loadURL(url.format({
     pathname: path.join(__dirname, "../index.html"),
     protocol: "file:",
@@ -19,6 +27,8 @@ function createWindow() {
     mainWindow = null
   })
 }
+
+app.commandLine.appendSwitch("ppapi-flash-path", "plugins/PepperFlashPlayer.plugin")
 
 app.on("ready", createWindow)
 
