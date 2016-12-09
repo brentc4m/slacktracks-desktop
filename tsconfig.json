@@ -3,7 +3,13 @@
     "src/**/*"
   ],
   "compilerOptions": {
-    "target": "ES5",
-    "outDir": "dist/js"
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es2015", "dom" ],
+    "noImplicitAny": true,
+    "outDir": "dist/js",
+    "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5"
   }
 }
