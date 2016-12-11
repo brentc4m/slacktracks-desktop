@@ -16,7 +16,7 @@ function createWindow() {
   })
 
   mainWindow.loadURL(url.format({
-    pathname: path.join(__dirname, "../index.html"),
+    pathname: path.join(__dirname, "index.html"),
     protocol: "file:",
     slashes: true
   }))
@@ -28,7 +28,9 @@ function createWindow() {
   })
 }
 
-app.commandLine.appendSwitch("ppapi-flash-path", "plugins/PepperFlashPlayer.plugin")
+// FIXME: cross platform
+app.commandLine.appendSwitch("ppapi-flash-path",
+  "plugins/PepperFlashPlayer.plugin")
 
 app.on("ready", createWindow)
 

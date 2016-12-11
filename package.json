@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Personalized streaming radio",
   "scripts": {
-    "start": "electron dist/js/main.js",
+    "start": "electron dist/main.js",
     "watch": "tsc -p . -w"
   },
   "repository": "https://github.com/brentc4m/slacktracks-desktop",
